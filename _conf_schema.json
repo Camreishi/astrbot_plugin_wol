@@ -2,7 +2,7 @@
   "target_macs": {
     "description": "目标设备及其 MAC 地址",
     "type": "list",
-    "hint": "配置要唤醒的设备列表，每个设备包含名称和 MAC 地址。请以 '设备名称 MAC地址' 的格式填写，例如: 'pc1 00:11:22:33:44:55'(不需要引号，中间空格隔开)",
+    "hint": "配置要唤醒的设备列表，每个设备包含名称和 MAC 地址。请以 '设备名称 MAC地址' 的格式填写，例如: 'pc1 00:11:22:33:44:55' (不需要引号，中间空格隔开)",
     "default": []
   },
   "default_mac_address": {
@@ -14,7 +14,7 @@
   "success_message": {
     "description": "唤醒成功消息",
     "type": "string",
-    "hint": "自定义唤醒成功后的消息。可以使用 {target_name} 和 {target_mac} 变量",
+    "hint": "自定义唤醒成功后的消息。可以使用 {target_name} 和 {target_mac} 变量，例如：已发送唤醒数据包到 {target_name} ({target_mac})",
     "default": "已发送唤醒数据包到 {target_name} ({target_mac})"
   },
   "allowed_sender_ids": {
