@@ -56,24 +56,24 @@ class WOLPlugin(Star):
     @event_filter.command("wolhelp")
     async def wol_help(self, event: AstrMessageEvent):
         help_message = """
-        WOL 唤醒插件帮助
+WOL 唤醒插件帮助
 
-        命令:
-        `/wol <设备名称>`: 唤醒指定名称的设备
-        `/wol <MAC地址>`:  直接使用MAC地址唤醒设备
-        `/wol`: 唤醒默认设备
-        `/wolhelp`: 显示此帮助信息
+命令:
+`/wol <设备名称>`: 唤醒指定名称的设备
+`/wol <MAC地址>`:  直接使用MAC地址唤醒设备
+`/wol`: 唤醒默认设备
+`/wolhelp`: 显示此帮助信息
 
-        配置:
-        - `target_macs`: 配置要唤醒的设备列表，格式为 `设备名称 MAC地址`，例如: `pc1 00:11:22:33:44:55`
-        - `default_mac_address`: 默认目标设备的 MAC 地址
-        - `success_message`: 自定义唤醒成功后的消息，可以使用 `{target_name}` 和 `{target_mac}` 变量
-        - `allowed_sender_ids`: 允许使用命令的发送者 ID 列表，可以通过AstrBot的 `/sid` 命令来获取用户 ID
+配置:
+- `target_macs`: 配置要唤醒的设备列表，格式为 `设备名称 MAC地址`，例如: `pc1 00:11:22:33:44:55`
+- `default_mac_address`: 默认目标设备的 MAC 地址
+- `success_message`: 自定义唤醒成功后的消息，可以使用 `{target_name}` 和 `{target_mac}` 变量，例如：已发送唤醒数据包到 {target_name} ({target_mac})
+- `allowed_sender_ids`: 允许使用命令的发送者 ID 列表，可以通过AstrBot的 `/sid` 命令来获取用户 ID
 
-        示例:
-        `/wol pc1`
-        `/wol 00:11:22:33:44:55`
-        `/wol` (使用默认 MAC 地址)
+示例:
+`/wol pc1`
+`/wol 00:11:22:33:44:55`
+`/wol` (使用默认 MAC 地址)
         """
         yield event.plain_result(help_message)
 
