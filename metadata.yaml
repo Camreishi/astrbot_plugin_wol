@@ -1,6 +1,6 @@
 name: astrbot_plugin_wol
 desc: 局域网 WOL 唤醒插件
-help: 帮助信息查看：https://github.com/Camreishi/astrbot_plugin_wol
-version: v1.0
+help: 使用/wolhelp查看帮助
+version: v1.0.1
 author: Camreishi # 作者
 repo: https://github.com/Camreishi/astrbot_plugin_wol
