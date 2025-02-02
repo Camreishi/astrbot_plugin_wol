@@ -1,0 +1,26 @@
+{
+  "target_macs": {
+    "description": "目标设备及其 MAC 地址",
+    "type": "list",
+    "hint": "配置要唤醒的设备列表，每个设备包含名称和 MAC 地址。请以 '设备名称 MAC地址' 的格式填写，例如: 'pc1 00:11:22:33:44:55'",
+    "default": []
+  },
+  "default_mac_address": {
+    "description": "默认目标设备 MAC 地址",
+    "type": "string",
+    "hint": "如果未指定目标设备名称，则使用此默认MAC地址",
+    "default": "00:00:00:00:00:00"
+  },
+  "success_message": {
+    "description": "唤醒成功消息",
+    "type": "string",
+    "hint": "自定义唤醒成功后的消息。可以使用 {target_name} 和 {target_mac} 变量",
+    "default": "已发送唤醒数据包到 {target_name} ({target_mac})"
+  },
+  "allowed_sender_ids": {
+    "description": "允许使用命令的发送者 ID 列表，可以通过AstrBot的 `/sid` 命令来获取用户 ID",
+    "type": "list",
+    "hint": "只有列表中的用户才能使用此命令。留空则不限制",
+    "default": []
+  }
+}
