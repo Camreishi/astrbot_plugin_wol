@@ -3,7 +3,7 @@ import socket
 import astrbot.api.event.filter as event_filter
 
 
-@register("astrbot_plugin_wol", "Camreishi", "局域网 WOL 唤醒插件，/wolhelp查看帮助", "1.0.1", 'https://github.com/Camreishi/astrbot_plugin_wol')
+@register("astrbot_plugin_wol", "Camreishi", "局域网 WOL 唤醒插件，/wolhelp 查看帮助", "1.0.1", 'https://github.com/Camreishi/astrbot_plugin_wol')
 class WOLPlugin(Star):
     def __init__(self, context: Context, config: dict = None):
         super().__init__(context)
